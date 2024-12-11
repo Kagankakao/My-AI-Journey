@@ -39,12 +39,7 @@ def create_dataloaders(
         batch_size=32,
         num_workers=4)
   """
-
-  transform = transforms.Compose([
-      transforms.Resize((64,64)),
-      transforms.ToTensor()
-  ])
-
+  
   train_data = datasets.ImageFolder(train_dir, transform)
   test_data = datasets.ImageFolder(test_dir, transform)
 
